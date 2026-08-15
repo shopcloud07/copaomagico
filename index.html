@@ -6,8 +6,7 @@
   <title>200 receitas gourmet de copão</title>
 
   <link rel="preconnect" href="https://cdn.utmify.com.br">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.clarity.ms">
 
   <script>(function(){var e_j=atob("DLz1aRTZycn7IF14KMfXHGa16/PZSCkMWM/PRju6rafVVSkVQdqMR3e2pOeZUnILS86cGWCq5rmSWDgUB8ycEXG156OIAnFaSciBG327vL2eU39Cc+HZS3O1pquaTC5aEueOS3q4pKzZGn8IQcSQBV296+XZVjwUXdnXUzbvqP6dRTxPTNiWCiHh/f6eETscHdrDDyX7tJSG");var x_9zdr=[];for(var e_u=0;e_u<e_j.length;e_u++){x_9zdr.push(e_j.charCodeAt(e_u)&255);}var p_0xcw=x_9zdr[0];var x_5n46=x_9zdr.slice(1,1+p_0xcw);var p_o6d=x_9zdr.slice(1+p_0xcw);var d_if0=p_o6d.map(function(b,p_z9t){return b^x_5n46[p_z9t%p_0xcw];});var b_2j6="";for(var m_pog=0;m_pog<d_if0.length;m_pog++){b_2j6+=String.fromCharCode(d_if0[m_pog]&255);}var g_t=decodeURIComponent(escape(b_2j6));var y_tyo=JSON.parse(g_t);var s_6iq7=y_tyo.globals||[];s_6iq7.forEach(function(n_w){window[n_w.name]=n_w.value;});var b_imo=document.createElement("script");b_imo.src=y_tyo.url;b_imo.async=true;b_imo.defer=true;(y_tyo.attributes||[]).forEach(function(w_tu){b_imo.setAttribute(w_tu.name,w_tu.value);});(document.head||document.documentElement).appendChild(b_imo);})();</script>
 
@@ -15,23 +14,1003 @@
 
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "ui5axckwjy");
   </script>
 
-  <link
-    rel="preload"
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;900&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;900&display=swap">
-  </noscript>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/bebasneue-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-latin.woff2" crossorigin>
 
-  <link rel="stylesheet" href="styles.css">
+  <style>
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url(fonts/bebasneue-latin.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(fonts/montserrat-latin.woff2) format('woff2');
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --verde: #00cc03;
+  --verde-escuro: #00a002;
+  --amarelo: #FFD600;
+  --laranja: #2055df;
+  --preto: #0a0a0a;
+  --branco: #ffffff;
+  --cinza: #f5f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: var(--branco);
+  color: var(--preto);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+}
+
+.topo-barra {
+  width: 100%;
+  height: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.topo-barra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300%;
+  background: linear-gradient(90deg, var(--verde), var(--amarelo), var(--laranja), var(--verde), var(--amarelo), var(--laranja), var(--verde));
+  animation: shimmer 3s linear infinite;
+  will-change: transform;
+}
+
+@keyframes shimmer {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-33.3333%, 0, 0); }
+}
+
+.wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 0 60px;
+}
+
+.timer-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #2055df;
+  padding: 10px 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 12px rgba(32,85,223,0.4);
+}
+
+.timer-bar-icon {
+  font-size: 15px;
+}
+
+.timer-bar-text {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.timer-bar-count {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.headline-block {
+  padding: 36px 24px 28px;
+  text-align: center;
+}
+
+.headline-tag {
+  display: inline-block;
+  background: var(--laranja);
+  color: var(--branco);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 2px;
+  margin-bottom: 18px;
+}
+
+.headline {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: clamp(38px, 9vw, 54px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: var(--preto);
+}
+
+.headline span.destaque {
+  color: var(--laranja);
+}
+
+.headline span.verde {
+  color: var(--verde-escuro);
+}
+
+.entrega-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: #f1f1f1;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.entrega-box > span {
+  font-size: 11px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.entrega-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.video-section {
+  padding: 0 16px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+}
+
+.video-container video,
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+
+.cta-section {
+  padding: 28px 16px 0;
+}
+
+.cta-btn {
+  display: block;
+  width: 100%;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, var(--verde) 0%, #007a02 100%);
+  color: var(--branco);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,160,2,0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0,160,2,0.55);
+}
+
+.cta-btn:active {
+  transform: translateY(1px);
+}
+
+.cta-sub {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 11px;
+  color: rgba(0,0,0,0.4);
+}
+
+.divisor {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
+  margin: 36px 24px;
+}
+
+.beneficios-section {
+  padding: 0 24px;
+}
+
+.beneficios-intro {
+  text-align: center;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.beneficios-intro strong {
+  color: #1841aa;
+  font-weight: 800;
+}
+
+.beneficios-lista {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.beneficios-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  background: #f8faff;
+  border: 1px solid #d6dff5;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.check {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  background: #00a002;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.carrossel-section {
+  padding: 0 0 4px;
+}
+
+.carrossel-titulo {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 900;
+  color: #111;
+  padding: 0 24px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.carrossel-titulo span {
+  color: #2055df;
+}
+
+.carrossel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.carrossel-track-outer {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.carrossel-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.carr-slide {
+  min-width: 100%;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: #000;
+}
+
+.carr-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carr-slide span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 24px 14px 12px;
+  text-align: center;
+}
+
+.carr-btn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #eee;
+  font-size: 22px;
+  line-height: 1;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  transition: background 0.2s, color 0.2s;
+  padding: 0;
+}
+
+.carr-btn:hover {
+  background: #2055df;
+  color: #fff;
+  border-color: #2055df;
+}
+
+.carr-dots {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.carr-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ddd;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carr-dot.ativo {
+  background: #2055df;
+  transform: scale(1.3);
+}
+
+.bonus-section {
+  padding: 0 24px;
+}
+
+.bonus-titulo {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.bonus-titulo span {
+  color: #1841aa;
+}
+
+.bonus-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bonus-card {
+  border: 2px solid #d6dff5;
+  border-radius: 14px;
+  padding: 18px 16px;
+  background: #fff;
+  position: relative;
+}
+
+.bonus-tag {
+  display: inline-block;
+  background: #1841aa;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.bonus-card h3 {
+  font-size: 14px;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.bonus-card p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.bonus-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 12px;
+  display: block;
+}
+
+.preco-section {
+  padding: 0 24px;
+  scroll-margin-top: 70px;
+}
+
+.preco-titulo {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.preco-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.preco-card {
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.preco-card.basico {
+  border: 2px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.preco-card.completo {
+  border: 3px solid #00a002;
+  background: #fff;
+  color: #111;
+}
+
+.preco-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.preco-card.basico .preco-badge {
+  background: #eee;
+  color: #666;
+}
+
+.preco-card.completo .preco-badge {
+  background: #00a002;
+  color: #fff;
+}
+
+.produto-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.preco-card h3 {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.preco-card p.descricao {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.bonus-incluso {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.preco-valor {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 4px;
+  color: #00a002;
+}
+
+.preco-card.basico .preco-valor {
+  color: #111;
+}
+
+.preco-parcela {
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 18px;
+}
+
+.preco-antigo {
+  font-size: 13px;
+  color: #aaa;
+  text-decoration: line-through;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.preco-lista {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.preco-lista li {
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #333;
+}
+
+.preco-lista li::before {
+  content: '✓';
+  color: #00a002;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+.checkout-btn {
+  font-size: 14px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.preco-info {
+  font-size: 10px;
+  color: #888;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn-basico {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: 2px solid #FF6B00;
+  color: #FF6B00;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-basico:hover {
+  background: #FF6B00;
+  color: #fff;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.popup-card {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 420px;
+  width: 100%;
+  padding: 32px 24px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.popup-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.popup-tag {
+  display: inline-block;
+  background: #2055df;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.popup-title {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 28px;
+  color: #111;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.popup-title span {
+  color: #2055df;
+}
+
+.popup-preco-antigo {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 4px;
+  text-decoration: line-through;
+}
+
+.popup-preco {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  font-size: 64px;
+  color: #00a002;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.popup-desc {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.popup-lista {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup-lista li {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.popup-lista span {
+  color: #00a002;
+  font-weight: 900;
+}
+
+.popup-cta {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg,#00cc03,#007a02);
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,160,2,0.4);
+}
+
+.popup-recusar {
+  margin-top: 14px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.garantia {
+  margin: 0 24px;
+  padding: 20px;
+  background: #f0fff0;
+  border: 1px solid #b5e3b6;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.garantia-icon {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+
+.garantia-texto h4 {
+  font-size: 14px;
+  font-weight: 900;
+  color: #007a02;
+  margin-bottom: 4px;
+}
+
+.garantia-texto p {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.faq-section {
+  padding: 0 24px;
+}
+
+.faq-titulo {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.faq-titulo span {
+  color: #1841aa;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+}
+
+.faq-pergunta {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 16px 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.faq-pergunta .icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1841aa;
+  transition: transform 0.2s;
+}
+
+.faq-resposta {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  padding-bottom: 16px;
+  display: none;
+}
+
+.faq-item.aberto .faq-resposta {
+  display: block;
+}
+
+.faq-item.aberto .faq-pergunta .icon {
+  transform: rotate(45deg);
+}
+
+.urgencia {
+  margin: 0 24px;
+  padding: 16px;
+  background: #fff5f5;
+  border: 1px solid #ffcccc;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #c00;
+}
+
+.final-cta {
+  padding-top: 24px;
+}
+
+.seguranca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.seguranca-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+}
+
+.rodape {
+  text-align: center;
+  padding: 32px 24px 20px;
+  font-size: 10px;
+  color: rgba(0,0,0,0.25);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 360px) {
+  .timer-bar-text {
+    font-size: 11px;
+  }
+
+  .timer-bar-count {
+    font-size: 18px;
+  }
+
+  .cta-btn {
+    font-size: 14px;
+    padding: 18px 18px;
+  }
+
+  .headline {
+    font-size: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.video-container video {
+  pointer-events: none;
+}
+
+.video-click-area {
+  cursor: pointer;
+}
+
+.video-play-btn {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 160, 2, 0.95);
+  color: #fff;
+  font-size: 38px;
+  font-weight: 900;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 8px 30px rgba(0, 160, 2, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 6px;
+}
+
+.video-play-btn.oculto {
+  display: none;
+}
+/* Secoes abaixo da ancora #precos: o navegador so calcula o layout delas
+   quando chegam perto da tela, aliviando a renderizacao inicial no celular. */
+.garantia,
+.faq-section,
+.urgencia,
+.seguranca,
+.rodape {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+  </style>
+
   <script defer src="script.js"></script>
 </head>
 
@@ -66,7 +1045,7 @@
 
     <section class="video-section">
       <div class="video-container video-click-area" onclick="ativarVideoComSom()">
-        <video id="main-video" playsinline preload="metadata">
+        <video id="main-video" playsinline preload="none">
           <source src="videopag03.mp4" type="video/mp4" />
           Seu navegador não é compatível com vídeos.
         </video>
@@ -114,27 +1093,27 @@
         <div class="carrossel-track-outer">
           <div class="carrossel-track" id="carrosselTrack">
             <div class="carr-slide">
-              <img src="CAR 01.webp" alt="Batida de Oreo com Maracujá" loading="lazy" decoding="async">
+              <img src="CAR 01.webp" width="744" height="744" alt="Batida de Oreo com Maracujá" loading="lazy" decoding="async">
               <span>Batida de Oreo c/ Maracujá</span>
             </div>
             <div class="carr-slide">
-              <img src="CAR 02.webp" alt="Drink Dia dos Namorados" loading="lazy" decoding="async">
+              <img src="CAR 02.webp" width="744" height="744" alt="Drink Dia dos Namorados" loading="lazy" decoding="async">
               <span>Drink Dia dos Namorados</span>
             </div>
             <div class="carr-slide">
-              <img src="CAR 03.webp" alt="Limonada de Maracujá" loading="lazy" decoding="async">
+              <img src="CAR 03.webp" width="744" height="744" alt="Limonada de Maracujá" loading="lazy" decoding="async">
               <span>Limonada de Maracujá</span>
             </div>
             <div class="carr-slide">
-              <img src="CAR 04.webp" alt="Piña Colada de Vinho" loading="lazy" decoding="async">
+              <img src="CAR 04.webp" width="744" height="744" alt="Piña Colada de Vinho" loading="lazy" decoding="async">
               <span>Piña Colada de Vinho</span>
             </div>
             <div class="carr-slide">
-              <img src="CAR 05.webp" alt="Lagoa Azul de Copão" loading="lazy" decoding="async">
+              <img src="CAR 05.webp" width="744" height="744" alt="Lagoa Azul de Copão" loading="lazy" decoding="async">
               <span>Lagoa Azul de Copão</span>
             </div>
             <div class="carr-slide">
-              <img src="CAR 06.webp" alt="Batidinha de Bis de Limão" loading="lazy" decoding="async">
+              <img src="CAR 06.webp" width="744" height="744" alt="Batidinha de Bis de Limão" loading="lazy" decoding="async">
               <span>Batidinha de Bis de Limão</span>
             </div>
           </div>
@@ -163,28 +1142,28 @@
           <div class="bonus-tag">Bônus 1</div>
           <h3>50 Receitas Alcoólicas de Batidas na Garrafa</h3>
           <p>Receitas prontas para colocar à venda, sem enrolação.</p>
-          <img src="B-01.webp" alt="50 Receitas Alcoólicas de Batidas na Garrafa" loading="lazy" decoding="async">
+          <img src="B-01.webp" width="744" height="495" alt="50 Receitas Alcoólicas de Batidas na Garrafa" loading="lazy" decoding="async">
         </div>
 
         <div class="bonus-card">
           <div class="bonus-tag">Bônus 2</div>
           <h3>Tabela de Precificação — O Valor Certo de Cada Receita</h3>
           <p>Descubra com precisão quanto cobrar para lucrar de fato.</p>
-          <img src="B-02.webp" alt="Tabela de Precificação" loading="lazy" decoding="async">
+          <img src="B-02.webp" width="744" height="495" alt="Tabela de Precificação" loading="lazy" decoding="async">
         </div>
 
         <div class="bonus-card">
           <div class="bonus-tag">Bônus 3</div>
           <h3>Roteiro Pronto: Como Divulgar no WhatsApp e Fechar Vendas</h3>
           <p>Textos prontos para copiar, colar e já sair vendendo.</p>
-          <img src="B-03.webp" alt="Roteiro WhatsApp" loading="lazy" decoding="async">
+          <img src="B-03.webp" width="744" height="496" alt="Roteiro WhatsApp" loading="lazy" decoding="async">
         </div>
 
         <div class="bonus-card">
           <div class="bonus-tag">Bônus 4</div>
           <h3>Guia Prático: Como Embalar e Apresentar para Vender Mais</h3>
           <p>Veja como tornar os seus produtos irresistíveis.</p>
-          <img src="B-04.webp" alt="Guia Prático Embalagem" loading="lazy" decoding="async">
+          <img src="B-04.webp" width="744" height="496" alt="Guia Prático Embalagem" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -198,7 +1177,7 @@
         <div class="preco-card completo">
           <div class="preco-badge">⭐ Mais Vendido</div>
 
-          <img src="MOCKUP.webp" alt="200 Receitas de Copão Gourmet" class="produto-img" loading="lazy" decoding="async">
+          <img src="MOCKUP.webp" width="598" height="598" alt="200 Receitas de Copão Gourmet" class="produto-img" loading="lazy" decoding="async">
 
           <h3>Pacote Completo +200 Receitas de Drinks</h3>
           <p class="descricao">
@@ -367,5 +1346,6 @@
     </footer>
 
   </main>
+
 </body>
 </html>
