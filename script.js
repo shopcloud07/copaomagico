@@ -156,18 +156,3 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('load', function () {
   iniciarCarrossel();
 });
-
-function ativarVideoComSom() {
-  const video = document.getElementById('main-video');
-  const playBtn = document.getElementById('video-play-btn');
-
-  if (!video) return;
-
-  video.muted = false;
-  video.controls = false;
-  video.play();
-
-  if (playBtn) {
-    playBtn.classList.add('oculto');
-  }
-}

